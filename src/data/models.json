@@ -2837,7 +2837,7 @@
     "id": "deepseek-v4.1-flash-cloud",
     "name": "DeepSeek V4.1 Flash",
     "family": "DeepSeek",
-    "sizeB": 748,
+    "sizeB": 763.21,
     "quantization": "API",
     "cloud_only": true,
     "openWeights": true,
@@ -2858,7 +2858,7 @@
     "speedScore": 70,
     "qualityScore": 98,
     "popularityScore": 91,
-    "notes": "Sep 10, 2026 refresh of V4 Flash, MIT, updated on Oct 17, 2026 as DeepSeek-V4.1-Flash-1017: a minor update with the same config and weight layout, stronger on reasoning, coding and agent tasks. Multimodal (image + text) MoE: 552B backbone plus a 196B sparsely-accessed Engram memory, 748B in the GGUF header (the 763B safetensors total on Hugging Face also counts the DSpark draft layers and the vision encoder), 8B active on prefill / 16B on decode, 1M context. Unsloth GGUFs of 1017 start at 233 GB (UD-IQ1_S), 250 GB (UD-IQ1_M) and 300 GB (UD-IQ2_XXS): 1-bit and 2-bit builds that need a 512GB Mac, a class ModelFit never ranks. Ollama lists only a cloud tag.",
+    "notes": "Sep 10, 2026 refresh of V4 Flash, MIT, updated on Oct 17, 2026 as DeepSeek-V4.1-Flash-1017: a minor update with the same config and weight layout, stronger on reasoning, coding and agent tasks. Multimodal (image + text) MoE: 763.21B parameters in total by the Hugging Face safetensors count (763,205,315,794, read on Nov 4, 2026): a 552B backbone, a 196B sparsely-accessed Engram memory, the MTP and DSpark draft layers and the vision encoder. The unsloth GGUF header counts 748.49B (no draft layers, no vision projector). 8B active on prefill / 16B on decode, 1M context. Unsloth GGUFs of 1017 start at 233 GB (UD-IQ1_S), 250 GB (UD-IQ1_M) and 300 GB (UD-IQ2_XXS): 1-bit and 2-bit builds that need a 512GB Mac, a class ModelFit never ranks. Ollama lists only a cloud tag.",
     "moeActiveB": 16,
     "sources": [
       "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
