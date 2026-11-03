@@ -171,7 +171,7 @@ export function parseNvidiaSmi(out) {
   const [name, vram] = rows[0].split(',').map((s) => s.trim());
   const vramGb = round((parseInt(vram, 10) || 0) / 1024);
   if (!name || !vramGb) return null;
-  return { name, vramGb, slug: gpuSlug(name), count: rows.length };
+  return { name, vramGb, slug: gpuSlug(name, vramGb), count: rows.length };
 }
 
 /** Best-effort NVIDIA detection via nvidia-smi (Linux + Windows). */
@@ -179,9 +179,20 @@ function detectNvidia() {
   return parseNvidiaSmi(sh('nvidia-smi', ['--query-gpu=name,memory.total', '--format=csv,noheader,nounits']));
 }
 
-/** "NVIDIA GeForce RTX 5070 Ti" -> "rtx-5070-ti" (best effort, for /gpu/<slug>/). */
-function gpuSlug(name) {
+/**
+ * "NVIDIA GeForce RTX 5070 Ti" -> "rtx-5070-ti" (best effort, for /gpu/<slug>/).
+ * The desktop RTX 3080 ships with 10GB or 12GB under the same nvidia-smi name, and the site lists
+ * only the 10GB card (/gpu/rtx-3080-10gb/): memory (or a "10GB"/"12GB" in the name) picks it, and a
+ * 12GB or laptop 3080 gets no card page rather than the wrong one.
+ */
+export function gpuSlug(name, vramGb) {
   const m = name.match(/rtx\s*(\d{3,4})\s*(ti|super)?/i);
+  if (m && m[1] === '3080' && !m[2]) {
+    if (/laptop|mobile|max-q/i.test(name)) return '';
+    const named = name.match(/\b(10|12)\s*gb\b/i);
+    const gb = named ? Number(named[1]) : vramGb;
+    return gb >= 9.5 && gb <= 10.5 ? 'rtx-3080-10gb' : '';
+  }
   if (m) return `rtx-${m[1]}${m[2] ? `-${m[2].toLowerCase()}` : ''}`;
   const dc = name.match(/\b([ah]100|l40s?|a6000)\b/i);
   if (dc) return dc[1].toLowerCase();
