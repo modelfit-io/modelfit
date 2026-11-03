@@ -1144,6 +1144,120 @@
     ]
   },
   {
+    "id": "qwen3-32b-q4",
+    "name": "Qwen3 32B",
+    "family": "Qwen",
+    "sizeB": 32,
+    "quantization": "Q4_K_M",
+    "minRamGb": 32,
+    "estimatedLoadGb": 20.2,
+    "bestFor": "Quality, Coding",
+    "publisherTier": "major",
+    "tags": [
+      "quality",
+      "coding",
+      "mixed"
+    ],
+    "speedScore": 45,
+    "qualityScore": 90,
+    "popularityScore": 84,
+    "ollamaCommand": "ollama run qwen3:32b-q4_K_M",
+    "notes": "Dense Qwen3 model (April 2025, Apache-2.0): 32.8B parameters, 32,768 tokens of native context and 131,072 with YaRN per the model card. Qwen also publishes official GGUF builds. Tag registry-verified.",
+    "releaseDate": "2025-04-27",
+    "successor": "qwen3.5-27b",
+    "sources": [
+      "https://huggingface.co/Qwen/Qwen3-32B",
+      "https://huggingface.co/Qwen/Qwen3-32B-GGUF",
+      "https://ollama.com/library/qwen3"
+    ]
+  },
+  {
+    "id": "qwen3-32b-q8",
+    "name": "Qwen3 32B (Q8)",
+    "family": "Qwen",
+    "sizeB": 32,
+    "quantization": "Q8_0",
+    "minRamGb": 64,
+    "estimatedLoadGb": 35.1,
+    "bestFor": "Quality, Coding",
+    "publisherTier": "major",
+    "tags": [
+      "quality",
+      "coding",
+      "mixed"
+    ],
+    "speedScore": 37,
+    "qualityScore": 92,
+    "popularityScore": 84,
+    "ollamaCommand": "ollama run qwen3:32b-q8_0",
+    "notes": "Q8_0 higher precision variant of Qwen3 32B, near lossless quality versus the Q4 default. Prefer it with 64GB or more RAM headroom for the 35.1GB weight file. Tag registry-verified 200.",
+    "releaseDate": "2025-04-27",
+    "successor": "qwen3.5-27b",
+    "sources": [
+      "https://huggingface.co/Qwen/Qwen3-32B",
+      "https://huggingface.co/Qwen/Qwen3-32B-GGUF",
+      "https://ollama.com/library/qwen3"
+    ]
+  },
+  {
+    "id": "qwen3-coder-30b-a3b-q4",
+    "name": "Qwen3 Coder 30B-A3B",
+    "family": "Qwen",
+    "sizeB": 30.5,
+    "moeActiveB": 3.3,
+    "quantization": "Q4_K_M",
+    "minRamGb": 32,
+    "estimatedLoadGb": 18.6,
+    "bestFor": "Coding, Agentic coding, Long context",
+    "publisherTier": "major",
+    "tags": [
+      "coding",
+      "agent",
+      "tool-calling",
+      "moe",
+      "long-context"
+    ],
+    "speedScore": 75,
+    "qualityScore": 89,
+    "popularityScore": 78,
+    "ollamaCommand": "ollama run qwen3-coder:30b-a3b-q4_K_M",
+    "notes": "Qwen's agentic coding model (July 2025, Apache-2.0): 30.5B total with 3.3B activated, 128 experts with 8 active, and 262,144 tokens of native context per the model card. Qwen publishes no GGUF for it, so the build is Ollama's. Tag registry-verified.",
+    "releaseDate": "2025-07-31",
+    "sources": [
+      "https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct",
+      "https://ollama.com/library/qwen3-coder"
+    ]
+  },
+  {
+    "id": "qwen3-coder-30b-a3b-q8",
+    "name": "Qwen3 Coder 30B-A3B (Q8)",
+    "family": "Qwen",
+    "sizeB": 30.5,
+    "moeActiveB": 3.3,
+    "quantization": "Q8_0",
+    "minRamGb": 48,
+    "estimatedLoadGb": 32.5,
+    "bestFor": "Coding, Agentic coding, Long context",
+    "publisherTier": "major",
+    "tags": [
+      "coding",
+      "agent",
+      "tool-calling",
+      "moe",
+      "long-context"
+    ],
+    "speedScore": 67,
+    "qualityScore": 91,
+    "popularityScore": 78,
+    "ollamaCommand": "ollama run qwen3-coder:30b-a3b-q8_0",
+    "notes": "Q8_0 higher precision variant of Qwen3 Coder 30B-A3B, near lossless quality versus the Q4 default. Prefer it with 48GB or more RAM headroom for the 32.5GB weight file. Tag registry-verified 200.",
+    "releaseDate": "2025-07-31",
+    "sources": [
+      "https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct",
+      "https://ollama.com/library/qwen3-coder"
+    ]
+  },
+  {
     "id": "gemma3-4b-q4",
     "name": "Gemma 3 4B Instruct",
     "family": "Gemma",
@@ -1343,6 +1457,58 @@
     "releaseDate": "2025-01-20",
     "sources": [
       "https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-14B"
+    ]
+  },
+  {
+    "id": "deepseek-r1-distill-qwen-32b-q4",
+    "name": "DeepSeek-R1 Distill Qwen 32B",
+    "family": "DeepSeek",
+    "sizeB": 32,
+    "quantization": "Q4_K_M",
+    "minRamGb": 32,
+    "estimatedLoadGb": 19.9,
+    "bestFor": "Reasoning, Quality",
+    "publisherTier": "major",
+    "tags": [
+      "reasoning",
+      "quality",
+      "coding"
+    ],
+    "speedScore": 45,
+    "qualityScore": 87,
+    "popularityScore": 66,
+    "ollamaCommand": "ollama run deepseek-r1:32b-qwen-distill-q4_K_M",
+    "notes": "DeepSeek-R1 reasoning distilled into Qwen2.5-32B (January 2025, MIT; the Qwen2.5 base is Apache 2.0) per the model card. The tag is the explicit qwen-distill build, the same weights deepseek-r1:32b pulls today. Tag registry-verified.",
+    "releaseDate": "2025-01-20",
+    "sources": [
+      "https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+      "https://ollama.com/library/deepseek-r1"
+    ]
+  },
+  {
+    "id": "deepseek-r1-distill-qwen-32b-q8",
+    "name": "DeepSeek-R1 Distill Qwen 32B (Q8)",
+    "family": "DeepSeek",
+    "sizeB": 32,
+    "quantization": "Q8_0",
+    "minRamGb": 64,
+    "estimatedLoadGb": 34.8,
+    "bestFor": "Reasoning, Quality",
+    "publisherTier": "major",
+    "tags": [
+      "reasoning",
+      "quality",
+      "coding"
+    ],
+    "speedScore": 37,
+    "qualityScore": 89,
+    "popularityScore": 66,
+    "ollamaCommand": "ollama run deepseek-r1:32b-qwen-distill-q8_0",
+    "notes": "Q8_0 higher precision variant of DeepSeek-R1 Distill Qwen 32B, near lossless quality versus the Q4 default. Prefer it with 64GB or more RAM headroom for the 34.8GB weight file. Tag registry-verified 200.",
+    "releaseDate": "2025-01-20",
+    "sources": [
+      "https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+      "https://ollama.com/library/deepseek-r1"
     ]
   },
   {
@@ -2434,6 +2600,107 @@
     ]
   },
   {
+    "id": "mistral-large-4",
+    "name": "Mistral Large 4",
+    "family": "Mistral",
+    "sizeB": 1049,
+    "moeActiveB": 49,
+    "quantization": "UD-IQ1_S",
+    "listedOnly": true,
+    "listedBuilds": [
+      {
+        "quantization": "UD-IQ1_S",
+        "bits": 1,
+        "sizeGb": 233.01,
+        "repo": "unsloth/Mistral-Large-4-1T-A52B-GGUF"
+      },
+      {
+        "quantization": "IQ2_XXS",
+        "bits": 2,
+        "sizeGb": 297.68,
+        "repo": "ggml-org/Mistral-Large-4-1T-A52B-GGUF"
+      },
+      {
+        "quantization": "Q2_K",
+        "bits": 2,
+        "sizeGb": 380.71,
+        "repo": "ggml-org/Mistral-Large-4-1T-A52B-GGUF"
+      },
+      {
+        "quantization": "UD-IQ3_XXS",
+        "bits": 3,
+        "sizeGb": 423.52,
+        "repo": "unsloth/Mistral-Large-4-1T-A52B-GGUF"
+      },
+      {
+        "quantization": "Q4_K_M",
+        "bits": 4,
+        "sizeGb": 634.8,
+        "repo": "ggml-org/Mistral-Large-4-1T-A52B-GGUF"
+      }
+    ],
+    "minRamGb": 512,
+    "estimatedLoadGb": 233,
+    "bestFor": "Reasoning, Agentic coding, Vision, Long context",
+    "publisherTier": "top",
+    "tags": [
+      "chat",
+      "coding",
+      "reasoning",
+      "agent",
+      "tool-calling",
+      "vision",
+      "multimodal",
+      "moe",
+      "long-context"
+    ],
+    "speedScore": 0,
+    "qualityScore": 0,
+    "popularityScore": 0,
+    "notes": "Mistral AI's open-weight flagship under the Mistral Ecosystem Open-Weight License, released on 29 October 2026: about 1T total parameters (the GGUF header counts 1,049,357,365,536), 49B active per token across 128 routed experts (4 active, 1 shared), text and image input, and a 1,048,576-token window in config.json. Ollama lists only a cloud tag.",
+    "releaseDate": "2026-10-29",
+    "sources": [
+      "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B",
+      "https://huggingface.co/unsloth/Mistral-Large-4-1T-A52B-GGUF",
+      "https://huggingface.co/ggml-org/Mistral-Large-4-1T-A52B-GGUF"
+    ]
+  },
+  {
+    "id": "mistral-large-4-cloud",
+    "name": "Mistral Large 4",
+    "family": "Mistral",
+    "sizeB": 1049,
+    "quantization": "API",
+    "cloud_only": true,
+    "openWeights": true,
+    "minRamGb": 0,
+    "estimatedLoadGb": 0,
+    "bestFor": "Reasoning, Agentic coding, Vision, Long context",
+    "publisherTier": "top",
+    "tags": [
+      "chat",
+      "coding",
+      "reasoning",
+      "agent",
+      "tool-calling",
+      "vision",
+      "multimodal",
+      "moe",
+      "long-context"
+    ],
+    "speedScore": 60,
+    "qualityScore": 96,
+    "popularityScore": 78,
+    "notes": "Mistral AI's open-weight flagship, released on 29 October 2026 under the Mistral Ecosystem Open-Weight License and served on the Mistral API as mistral-large-4 (Ollama lists only a cloud tag). About 1T total parameters (1,049B in the GGUF header), 49B active per token across 128 routed experts (4 active, 1 shared), text and image input, 1M context. The GGUFs that fit a Mac are 1-bit to 3-bit builds for a 512GB Mac Studio: the model page lists them and ModelFit ranks none.",
+    "moeActiveB": 49,
+    "sources": [
+      "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B",
+      "https://docs.mistral.ai/models/mistral-large-4-0",
+      "https://huggingface.co/unsloth/Mistral-Large-4-1T-A52B-GGUF",
+      "https://huggingface.co/ggml-org/Mistral-Large-4-1T-A52B-GGUF"
+    ]
+  },
+  {
     "id": "deepseek-v4-flash-cloud",
     "name": "DeepSeek V4 Flash 0731",
     "family": "DeepSeek",
@@ -2459,6 +2726,81 @@
     "moeActiveB": 13,
     "sources": [
       "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731",
+      "https://api-docs.deepseek.com/updates/"
+    ]
+  },
+  {
+    "id": "deepseek-v4-flash",
+    "name": "DeepSeek V4 Flash 0731",
+    "family": "DeepSeek",
+    "sizeB": 284,
+    "moeActiveB": 13,
+    "quantization": "UD-IQ1_S",
+    "listedOnly": true,
+    "listedBuilds": [
+      {
+        "quantization": "UD-IQ1_S",
+        "bits": 1,
+        "sizeGb": 82.54,
+        "repo": "unsloth/DeepSeek-V4-Flash-0731-GGUF"
+      },
+      {
+        "quantization": "UD-IQ2_XXS",
+        "bits": 2,
+        "sizeGb": 90.86,
+        "repo": "unsloth/DeepSeek-V4-Flash-0731-GGUF"
+      },
+      {
+        "quantization": "UD-Q2_K_XL",
+        "bits": 2,
+        "sizeGb": 96.83,
+        "repo": "unsloth/DeepSeek-V4-Flash-0731-GGUF"
+      },
+      {
+        "quantization": "UD-IQ3_XXS",
+        "bits": 3,
+        "sizeGb": 104.21,
+        "repo": "unsloth/DeepSeek-V4-Flash-0731-GGUF"
+      },
+      {
+        "quantization": "UD-Q3_K_XL",
+        "bits": 3,
+        "sizeGb": 128.21,
+        "repo": "unsloth/DeepSeek-V4-Flash-0731-GGUF"
+      },
+      {
+        "quantization": "UD-Q4_K_XL",
+        "bits": 4,
+        "sizeGb": 155.1,
+        "repo": "unsloth/DeepSeek-V4-Flash-0731-GGUF"
+      },
+      {
+        "quantization": "UD-Q8_K_XL",
+        "bits": 8,
+        "sizeGb": 161.87,
+        "repo": "unsloth/DeepSeek-V4-Flash-0731-GGUF"
+      }
+    ],
+    "minRamGb": 128,
+    "estimatedLoadGb": 83,
+    "bestFor": "Reasoning, Coding, Long context",
+    "publisherTier": "top",
+    "tags": [
+      "reasoning",
+      "coding",
+      "quality",
+      "moe",
+      "long-context"
+    ],
+    "speedScore": 0,
+    "qualityScore": 0,
+    "popularityScore": 0,
+    "notes": "DeepSeek's official 0731 release of V4 Flash (July 31, 2026), open weights under MIT and also served on the DeepSeek API: 284B total and 13B active parameters with a 1M-token context per the V4 model card. The unsloth GGUF header counts 284,334,567,511 parameters; the 304,180,418,494 safetensors total also counts the MTP layer and the attached DSpark speculative-decoding module. ModelFit lists these builds without ranking them: its speed model does not cover DeepSeek V4's compressed attention yet. No Ollama tag.",
+    "releaseDate": "2026-07-31",
+    "sources": [
+      "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731",
+      "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
+      "https://huggingface.co/unsloth/DeepSeek-V4-Flash-0731-GGUF",
       "https://api-docs.deepseek.com/updates/"
     ]
   },
@@ -2495,7 +2837,7 @@
     "id": "deepseek-v4.1-flash-cloud",
     "name": "DeepSeek V4.1 Flash",
     "family": "DeepSeek",
-    "sizeB": 552,
+    "sizeB": 748,
     "quantization": "API",
     "cloud_only": true,
     "openWeights": true,
@@ -2516,10 +2858,12 @@
     "speedScore": 70,
     "qualityScore": 98,
     "popularityScore": 91,
-    "notes": "Sep 10, 2026 refresh of V4 Flash, MIT. Multimodal (image + text) MoE: 552B backbone plus a 196B sparsely-accessed Engram memory, 8B active on prefill / 16B on decode, 1M context. FP8 weights on Hugging Face (~390k downloads in week 1). No Ollama library tag; far beyond consumer hardware locally.",
+    "notes": "Sep 10, 2026 refresh of V4 Flash, MIT, updated on Oct 17, 2026 as DeepSeek-V4.1-Flash-1017: a minor update with the same config and weight layout, stronger on reasoning, coding and agent tasks. Multimodal (image + text) MoE: 552B backbone plus a 196B sparsely-accessed Engram memory, 748B in the GGUF header (the 763B safetensors total on Hugging Face also counts the DSpark draft layers and the vision encoder), 8B active on prefill / 16B on decode, 1M context. Unsloth GGUFs of 1017 start at 233 GB (UD-IQ1_S), 250 GB (UD-IQ1_M) and 300 GB (UD-IQ2_XXS): 1-bit and 2-bit builds that need a 512GB Mac, a class ModelFit never ranks. Ollama lists only a cloud tag.",
     "moeActiveB": 16,
     "sources": [
       "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
+      "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "https://huggingface.co/unsloth/DeepSeek-V4.1-Flash-1017-GGUF",
       "https://api-docs.deepseek.com/updates/"
     ]
   },
@@ -3880,6 +4224,62 @@
     ]
   },
   {
+    "id": "glm-4-9b-chat-q4",
+    "name": "GLM-4-9B-Chat",
+    "family": "Zhipu",
+    "sizeB": 9.4,
+    "quantization": "Q4_K_M",
+    "minRamGb": 12,
+    "estimatedLoadGb": 6.3,
+    "bestFor": "Chat, Translation, Tool calling",
+    "publisherTier": "major",
+    "tags": [
+      "chat",
+      "translation",
+      "tool-calling",
+      "long-context"
+    ],
+    "speedScore": 72,
+    "qualityScore": 75,
+    "popularityScore": 72,
+    "ollamaCommand": "ollama run glm4:9b-chat-q4_K_M",
+    "notes": "Zhipu AI's June 2024 chat model under the custom glm-4 license: 9.4B parameters, up to 128K context, web browsing, code execution and function calling, and 26 languages per the model card. It is not GLM-4-9B-0414, a separate April 2025 model. Tag registry-verified.",
+    "releaseDate": "2024-06-04",
+    "sources": [
+      "https://huggingface.co/zai-org/glm-4-9b-chat",
+      "https://huggingface.co/zai-org/glm-4-9b-chat-hf",
+      "https://ollama.com/library/glm4"
+    ]
+  },
+  {
+    "id": "glm-4-9b-chat-q8",
+    "name": "GLM-4-9B-Chat (Q8)",
+    "family": "Zhipu",
+    "sizeB": 9.4,
+    "quantization": "Q8_0",
+    "minRamGb": 16,
+    "estimatedLoadGb": 10,
+    "bestFor": "Chat, Translation, Tool calling",
+    "publisherTier": "major",
+    "tags": [
+      "chat",
+      "translation",
+      "tool-calling",
+      "long-context"
+    ],
+    "speedScore": 64,
+    "qualityScore": 77,
+    "popularityScore": 72,
+    "ollamaCommand": "ollama run glm4:9b-chat-q8_0",
+    "notes": "Q8_0 higher precision variant of GLM-4-9B-Chat, near lossless quality versus the Q4 default. Prefer it with 16GB or more RAM headroom for the 10GB weight file. Tag registry-verified 200.",
+    "releaseDate": "2024-06-04",
+    "sources": [
+      "https://huggingface.co/zai-org/glm-4-9b-chat",
+      "https://huggingface.co/zai-org/glm-4-9b-chat-hf",
+      "https://ollama.com/library/glm4"
+    ]
+  },
+  {
     "id": "nemotron-3-super-120b-q4",
     "name": "Nemotron 3 Super 120B-A12B",
     "family": "Nemotron",
@@ -4413,6 +4813,60 @@
     ]
   },
   {
+    "id": "nanbeige4.3-33b-q4",
+    "name": "Nanbeige4.3 33B",
+    "family": "Nanbeige",
+    "sizeB": 33.1,
+    "quantization": "Q4_K_M",
+    "minRamGb": 32,
+    "estimatedLoadGb": 20.8,
+    "bestFor": "Agentic coding, Agents, Long context",
+    "publisherTier": "emerging",
+    "tags": [
+      "chat",
+      "coding",
+      "agent",
+      "reasoning",
+      "long-context"
+    ],
+    "speedScore": 45,
+    "qualityScore": 92,
+    "popularityScore": 60,
+    "notes": "Nanbeige LLM Lab's agentic coding and cowork model (Oct 2026, Apache 2.0): a dense 33B Llama-architecture model with 52 layers and a 524,288-token context. Per the lab's model card, at the highest thinking effort: Terminal-Bench 2.1 80.9 and SWE-Bench Pro 60.3, against 73.0 and 61.7 for Qwen3.8-27B in the same table. No Ollama library tag; the bartowski Q4_K_M GGUF is 20.79 GB, so it wants a 32GB machine.",
+    "releaseDate": "2026-10-24",
+    "sources": [
+      "https://huggingface.co/Nanbeige/Nanbeige4.3-33B",
+      "https://huggingface.co/bartowski/Nanbeige_Nanbeige4.3-33B-GGUF"
+    ]
+  },
+  {
+    "id": "nanbeige4.3-33b-q8",
+    "name": "Nanbeige4.3 33B (Q8)",
+    "family": "Nanbeige",
+    "sizeB": 33.1,
+    "quantization": "Q8_0",
+    "minRamGb": 64,
+    "estimatedLoadGb": 35.2,
+    "bestFor": "Agentic coding, Agents, Long context",
+    "publisherTier": "emerging",
+    "tags": [
+      "chat",
+      "coding",
+      "agent",
+      "reasoning",
+      "long-context"
+    ],
+    "speedScore": 37,
+    "qualityScore": 94,
+    "popularityScore": 60,
+    "notes": "Q8_0 higher precision variant of Nanbeige4.3 33B, near lossless quality versus the Q4 default. No Ollama library tag; the bartowski Q8_0 GGUF is 35.20 GB, so it wants a 64GB machine.",
+    "releaseDate": "2026-10-24",
+    "sources": [
+      "https://huggingface.co/Nanbeige/Nanbeige4.3-33B",
+      "https://huggingface.co/bartowski/Nanbeige_Nanbeige4.3-33B-GGUF"
+    ]
+  },
+  {
     "id": "muse-spark-open-cloud",
     "name": "Muse Spark Open",
     "family": "Muse",
@@ -4531,6 +4985,47 @@
     ]
   },
   {
+    "id": "nemotron-3.5-bolt-74b-a9b",
+    "name": "NVIDIA Nemotron 3.5 Bolt 74B-A9B",
+    "family": "Nemotron",
+    "sizeB": 74,
+    "moeActiveB": 9,
+    "quantization": "IQ2_XXS",
+    "listedOnly": true,
+    "listedBuilds": [
+      {
+        "quantization": "IQ2_XXS",
+        "bits": 2,
+        "sizeGb": 22.02,
+        "repo": "nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB-GGUF"
+      }
+    ],
+    "minRamGb": 32,
+    "estimatedLoadGb": 22,
+    "bestFor": "Agentic tasks, Tool calling, Vision",
+    "publisherTier": "major",
+    "tags": [
+      "chat",
+      "agent",
+      "tool-calling",
+      "vision",
+      "multimodal",
+      "moe",
+      "long-context"
+    ],
+    "speedScore": 0,
+    "qualityScore": 0,
+    "popularityScore": 0,
+    "notes": "NVIDIA's vision-language MoE, released on Hugging Face on October 15, 2026 under OpenMDW-1.1: 74B total with 9B active per token and up to 256K tokens of context per the model card. NVIDIA ships it only as a native 2-bit build (experts in IQ2-XXS, Mamba layers in NVFP4, embedding and output in Q8_0). Ollama's library page says Apple Silicon / Metal is not currently supported for 74B-A9B.",
+    "releaseDate": "2026-10-15",
+    "sources": [
+      "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB",
+      "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB-GGUF",
+      "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-BF16",
+      "https://ollama.com/library/nemotron-3.5-bolt"
+    ]
+  },
+  {
     "id": "granite-switch-4.1-8b-q4",
     "name": "Granite Switch 4.1 8B",
     "family": "Granite",
@@ -4578,6 +5073,299 @@
     "sources": [
       "https://huggingface.co/ibm-granite/granite-switch-4.1-30b",
       "https://huggingface.co/ibm-granite/granite-switch-4.1-30b-GGUF"
+    ]
+  },
+  {
+    "id": "jebadiah-9b-q4",
+    "name": "Jebadiah 9B",
+    "family": "Jebadiah",
+    "sizeB": 9,
+    "kvKbPerToken": 32,
+    "quantization": "Q4_K_M",
+    "minRamGb": 12,
+    "estimatedLoadGb": 5.8,
+    "bestFor": "Decisions",
+    "publisherTier": "emerging",
+    "tags": [
+      "decision"
+    ],
+    "speedScore": 70,
+    "qualityScore": 68,
+    "popularityScore": 36,
+    "notes": "Apache-2.0 decision model (v2.1), merged from Qwen3.5 9B. It returns a probability for each labelled option, with thinking off, instead of a chat reply. The Q4_K_M file is jebadiah-9b-v2-1-Q4_K_M.gguf (5780090496 bytes). Published decision checks use a 4,096-token context; training prompts were capped at 2,048 tokens. The base model's 262,144-token config window is not a tested limit for this build. Ollama and LM Studio have not been checked for this v2.1 build, so this entry has no command for them.",
+    "releaseDate": "2026-10-10",
+    "validatedContextTokens": 4096,
+    "unverifiedRuntimes": [
+      "ollama",
+      "lm-studio"
+    ],
+    "sources": [
+      "https://huggingface.co/frontier-infra/jebadiah-9b-v2-1",
+      "https://huggingface.co/frontier-infra/jebadiah-9b-v2-1-GGUF"
+    ]
+  },
+  {
+    "id": "jebadiah-9b-q5",
+    "name": "Jebadiah 9B (Q5)",
+    "family": "Jebadiah",
+    "sizeB": 9,
+    "kvKbPerToken": 32,
+    "quantization": "Q5_K_M",
+    "minRamGb": 12,
+    "estimatedLoadGb": 6.6,
+    "bestFor": "Decisions",
+    "publisherTier": "emerging",
+    "tags": [
+      "decision"
+    ],
+    "speedScore": 66,
+    "qualityScore": 69,
+    "popularityScore": 36,
+    "notes": "Q5_K_M build of Jebadiah 9B v2.1. The file is jebadiah-9b-v2-1-Q5_K_M.gguf (6642544256 bytes). Published decision checks use a 4,096-token context; training prompts were capped at 2,048 tokens. The base model's 262,144-token config window is not a tested limit for this build. Ollama and LM Studio have not been checked for this v2.1 build, so this entry has no command for them.",
+    "releaseDate": "2026-10-10",
+    "validatedContextTokens": 4096,
+    "unverifiedRuntimes": [
+      "ollama",
+      "lm-studio"
+    ],
+    "sources": [
+      "https://huggingface.co/frontier-infra/jebadiah-9b-v2-1",
+      "https://huggingface.co/frontier-infra/jebadiah-9b-v2-1-GGUF"
+    ]
+  },
+  {
+    "id": "jebadiah-9b-q8",
+    "name": "Jebadiah 9B (Q8)",
+    "family": "Jebadiah",
+    "sizeB": 9,
+    "kvKbPerToken": 32,
+    "quantization": "Q8_0",
+    "minRamGb": 16,
+    "estimatedLoadGb": 9.8,
+    "bestFor": "Decisions",
+    "publisherTier": "emerging",
+    "tags": [
+      "decision"
+    ],
+    "speedScore": 62,
+    "qualityScore": 70,
+    "popularityScore": 36,
+    "notes": "Q8_0 build of Jebadiah 9B v2.1, the quant in the published llama.cpp recipe. The file is jebadiah-9b-v2-1-Q8_0.gguf (9786060416 bytes). Published decision checks use a 4,096-token context; training prompts were capped at 2,048 tokens. The base model's 262,144-token config window is not a tested limit for this build. Ollama and LM Studio have not been checked for this v2.1 build, so this entry has no command for them.",
+    "releaseDate": "2026-10-10",
+    "validatedContextTokens": 4096,
+    "unverifiedRuntimes": [
+      "ollama",
+      "lm-studio"
+    ],
+    "sources": [
+      "https://huggingface.co/frontier-infra/jebadiah-9b-v2-1",
+      "https://huggingface.co/frontier-infra/jebadiah-9b-v2-1-GGUF"
+    ]
+  },
+  {
+    "id": "jebadiah-27b-q4",
+    "name": "Jebadiah 27B",
+    "family": "Jebadiah",
+    "sizeB": 27,
+    "kvKbPerToken": 64,
+    "quantization": "Q4_K_M",
+    "minRamGb": 32,
+    "estimatedLoadGb": 16.8,
+    "bestFor": "Decisions",
+    "publisherTier": "emerging",
+    "tags": [
+      "decision"
+    ],
+    "speedScore": 58,
+    "qualityScore": 72,
+    "popularityScore": 38,
+    "notes": "Apache-2.0 decision model (v2.1), merged from Qwen3.8 27B. It returns a probability for each labelled option, with thinking off, instead of a chat reply. The Q4_K_M file is jebadiah-27b-v2-1-Q4_K_M.gguf (16810714688 bytes). Published decision checks use a 4,096-token context; training prompts were capped at 2,048 tokens. The base model's 262,144-token config window is not a tested limit for this build. Ollama and LM Studio have not been checked for this v2.1 build, so this entry has no command for them.",
+    "releaseDate": "2026-10-10",
+    "validatedContextTokens": 4096,
+    "unverifiedRuntimes": [
+      "ollama",
+      "lm-studio"
+    ],
+    "sources": [
+      "https://huggingface.co/frontier-infra/jebadiah-27b-v2-1",
+      "https://huggingface.co/frontier-infra/jebadiah-27b-v2-1-GGUF"
+    ]
+  },
+  {
+    "id": "jebadiah-27b-q5",
+    "name": "Jebadiah 27B (Q5)",
+    "family": "Jebadiah",
+    "sizeB": 27,
+    "kvKbPerToken": 64,
+    "quantization": "Q5_K_M",
+    "minRamGb": 32,
+    "estimatedLoadGb": 19.5,
+    "bestFor": "Decisions",
+    "publisherTier": "emerging",
+    "tags": [
+      "decision"
+    ],
+    "speedScore": 54,
+    "qualityScore": 73,
+    "popularityScore": 38,
+    "notes": "Q5_K_M build of Jebadiah 27B v2.1. The file is jebadiah-27b-v2-1-Q5_K_M.gguf (19535701568 bytes). Published decision checks use a 4,096-token context; training prompts were capped at 2,048 tokens. The base model's 262,144-token config window is not a tested limit for this build. Ollama and LM Studio have not been checked for this v2.1 build, so this entry has no command for them.",
+    "releaseDate": "2026-10-10",
+    "validatedContextTokens": 4096,
+    "unverifiedRuntimes": [
+      "ollama",
+      "lm-studio"
+    ],
+    "sources": [
+      "https://huggingface.co/frontier-infra/jebadiah-27b-v2-1",
+      "https://huggingface.co/frontier-infra/jebadiah-27b-v2-1-GGUF"
+    ]
+  },
+  {
+    "id": "jebadiah-27b-q8",
+    "name": "Jebadiah 27B (Q8)",
+    "family": "Jebadiah",
+    "sizeB": 27,
+    "kvKbPerToken": 64,
+    "quantization": "Q8_0",
+    "minRamGb": 48,
+    "estimatedLoadGb": 29.0,
+    "bestFor": "Decisions",
+    "publisherTier": "emerging",
+    "tags": [
+      "decision"
+    ],
+    "speedScore": 50,
+    "qualityScore": 74,
+    "popularityScore": 38,
+    "notes": "Q8_0 build of Jebadiah 27B v2.1, the quant in the published llama.cpp recipe. The file is jebadiah-27b-v2-1-Q8_0.gguf (29047084608 bytes). Published decision checks use a 4,096-token context; training prompts were capped at 2,048 tokens. The base model's 262,144-token config window is not a tested limit for this build. Ollama and LM Studio have not been checked for this v2.1 build, so this entry has no command for them.",
+    "releaseDate": "2026-10-10",
+    "validatedContextTokens": 4096,
+    "unverifiedRuntimes": [
+      "ollama",
+      "lm-studio"
+    ],
+    "sources": [
+      "https://huggingface.co/frontier-infra/jebadiah-27b-v2-1",
+      "https://huggingface.co/frontier-infra/jebadiah-27b-v2-1-GGUF"
+    ]
+  },
+  {
+    "id": "lfm3-1.7b-q4",
+    "name": "LFM3 1.7B",
+    "family": "LFM3",
+    "sizeB": 1.73,
+    "kvKbPerToken": 12,
+    "quantization": "Q4_K_M",
+    "minRamGb": 4,
+    "estimatedLoadGb": 1.1,
+    "bestFor": "Local agents, Tool calling, Structured output",
+    "publisherTier": "top",
+    "tags": [
+      "chat",
+      "agent",
+      "tool-calling",
+      "long-context",
+      "mobile"
+    ],
+    "speedScore": 94,
+    "qualityScore": 70,
+    "popularityScore": 75,
+    "ollamaCommand": "ollama run lfm3:1.7b",
+    "notes": "Liquid AI's LFM3 text model (October 2026, LFM Open License v1.0): 1.73B parameters on a tri-hybrid stack of 24 layers (13 gated short convolutions, 5 sliding-window attention, 6 global attention) with a 262,144-token context. Built for local agents, tool calling and structured outputs; Liquid AI does not recommend it for agentic coding or complex multi-step reasoning. The Ollama lfm3:1.7b tag is the Q4_K_M build. Tag registry-verified.",
+    "releaseDate": "2026-10-23",
+    "sources": [
+      "https://huggingface.co/LiquidAI/LFM3-1.7B",
+      "https://huggingface.co/LiquidAI/LFM3-1.7B-GGUF",
+      "https://ollama.com/library/lfm3"
+    ]
+  },
+  {
+    "id": "ling-3.1-flash-1019",
+    "name": "Ling-3.1-flash-1019",
+    "family": "Ling",
+    "sizeB": 560,
+    "moeActiveB": 25,
+    "quantization": "Q4_K_M",
+    "minRamGb": 512,
+    "estimatedLoadGb": 358,
+    "bestFor": "Reasoning, Agents, Long context",
+    "publisherTier": "major",
+    "tags": [
+      "chat",
+      "coding",
+      "agent",
+      "reasoning",
+      "moe",
+      "long-context"
+    ],
+    "speedScore": 20,
+    "qualityScore": 95,
+    "popularityScore": 55,
+    "notes": "inclusionAI's October 2026 upgrade of Ling-3.1-flash (MIT): 560B total and 25B active parameters per token, with 512 routed experts, 8 activated and 1 shared, and hybrid linear attention with one MLA layer in each group of 8. The card advertises a 1M-token window; config.json sets 262,144 tokens, the figure used here. No Ollama tag: the bartowski Q4_K_M GGUF is about 358 GB, so only a 512GB Mac Studio holds it. Ling-3.0-flash remains the Ling pick for 96GB and 128GB machines.",
+    "releaseDate": "2026-10-27",
+    "sources": [
+      "https://huggingface.co/inclusionAI/Ling-3.1-flash-1019",
+      "https://huggingface.co/bartowski/Ling-3.1-flash-1019-GGUF"
+    ]
+  },
+  {
+    "id": "ornith-1.5-122b-q4",
+    "name": "Ornith 1.5 122B",
+    "family": "Ornith",
+    "sizeB": 125.09,
+    "moeActiveB": 10,
+    "kvKbPerToken": 24,
+    "quantization": "Q4_K_M",
+    "minRamGb": 128,
+    "estimatedLoadGb": 75.8,
+    "bestFor": "Agentic coding",
+    "publisherTier": "community",
+    "tags": [
+      "coding",
+      "agent",
+      "moe",
+      "long-context"
+    ],
+    "speedScore": 58,
+    "qualityScore": 95,
+    "popularityScore": 74,
+    "ollamaCommand": "ollama run ornith-1.5:122b",
+    "notes": "Ornith 1.5 (October 2026, MIT) extends the Ornith 1.0 agentic coders and is optimized for terminal-based coding agents. Its config.json has the Qwen3.5-122B-A10B layout: 256 experts with 8 routed and 1 shared per token, so about 10B active, and a 262,144-token context. The Ollama ornith-1.5:122b pull is the Q4_K_M build at about 76 GB, so it needs a 128GB machine. Tag registry-verified.",
+    "releaseDate": "2026-10-16",
+    "sources": [
+      "https://huggingface.co/ornith-ai/Ornith-1.5-122B",
+      "https://huggingface.co/ornith-ai/Ornith-1.5-122B-GGUF",
+      "https://ollama.com/library/ornith-1.5"
+    ]
+  },
+  {
+    "id": "sage-a1.5-q4",
+    "name": "Sage-A1.5",
+    "family": "Sage",
+    "sizeB": 35.95,
+    "moeActiveB": 3,
+    "kvKbPerToken": 20,
+    "quantization": "Q4_K_M",
+    "minRamGb": 32,
+    "estimatedLoadGb": 21.7,
+    "bestFor": "Scientific research agents, Long-horizon tasks",
+    "publisherTier": "major",
+    "tags": [
+      "agent",
+      "reasoning",
+      "coding",
+      "moe",
+      "multimodal",
+      "long-context"
+    ],
+    "speedScore": 82,
+    "qualityScore": 93,
+    "popularityScore": 78,
+    "notes": "InternScience's agentic model for long-horizon scientific problem solving (October 2026, Apache-2.0), from Shanghai AI Laboratory. It is a 35B mixture-of-experts based on Qwen3.6-35B-A3B; its config.json keeps that layout (256 experts, 8 routed per token), so about 3B are active, and it adds a vision encoder. 256K native context. No Ollama library tag: the official Q4_K_M GGUF is 21.7 GB and runs in a recent llama.cpp build with qwen35moe support.",
+    "releaseDate": "2026-10-15",
+    "sources": [
+      "https://huggingface.co/InternScience/Sage-A1.5",
+      "https://huggingface.co/InternScience/Sage-A1.5-Q4_K_M-GGUF"
     ]
   }
 ]

@@ -411,6 +411,7 @@ const REASONS = {
   'multi-gpu': 'multi-GPU runs are kept off the leaderboard',
   'below-floor': 'a run was slower than any working setup',
   'above-ceiling': 'a run was faster than this machine\'s memory bandwidth allows',
+  'implausible-slow': 'the run was far slower than this GPU or chip, as if the model ran on the CPU',
 };
 
 /**

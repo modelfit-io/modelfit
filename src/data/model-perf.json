@@ -2,13 +2,13 @@
  "description": "Physical inputs of the speed engine per local catalog model, built by scripts/perf/build-model-perf.mjs from data/perf-models.json. Never hand-edit.",
  "synthetic": {
   "gbPerB": {
-   "Q4": 0.6285,
-   "Q8": 1.0769,
+   "Q4": 0.6339,
+   "Q8": 1.0807,
    "MXFP4": 0.6597
   },
-  "denseStreamFrac": 0.9851,
-  "kvBytesPerTokenPerB": 12130.9,
-  "attnFlopsPerCtxPerB": 55471.3,
+  "denseStreamFrac": 0.9841,
+  "kvBytesPerTokenPerB": 11094.3,
+  "attnFlopsPerCtxPerB": 53511.9,
   "note": "medians over the catalog entries above (dense full-attention models for KV and attention)"
  },
  "models": {
@@ -652,6 +652,70 @@
    "attnFlopsPerCtx": 786432,
    "maxContext": 40960
   },
+  "qwen3-32b-q4": {
+   "arch": "qwen3-32b",
+   "weightsGb": 20.2012,
+   "weightsSource": "ollama-manifest",
+   "streamedGb": 19.7216,
+   "paramsB": 32.761,
+   "activeB": 32.761,
+   "moe": false,
+   "kv": {
+    "fullBytesPerToken": 262144,
+    "swaBytesPerToken": 0,
+    "window": null
+   },
+   "attnFlopsPerCtx": 2097152,
+   "maxContext": 40960
+  },
+  "qwen3-32b-q8": {
+   "arch": "qwen3-32b",
+   "weightsGb": 35.1323,
+   "weightsSource": "ollama-manifest",
+   "streamedGb": 34.2981,
+   "paramsB": 32.761,
+   "activeB": 32.761,
+   "moe": false,
+   "kv": {
+    "fullBytesPerToken": 262144,
+    "swaBytesPerToken": 0,
+    "window": null
+   },
+   "attnFlopsPerCtx": 2097152,
+   "maxContext": 40960
+  },
+  "qwen3-coder-30b-a3b-q4": {
+   "arch": "qwen3-coder-30b-a3b",
+   "weightsGb": 18.5567,
+   "weightsSource": "ollama-manifest",
+   "streamedGb": 1.8487,
+   "paramsB": 30.532,
+   "activeB": 3.353,
+   "moe": true,
+   "kv": {
+    "fullBytesPerToken": 98304,
+    "swaBytesPerToken": 0,
+    "window": null
+   },
+   "attnFlopsPerCtx": 786432,
+   "maxContext": 262144
+  },
+  "qwen3-coder-30b-a3b-q8": {
+   "arch": "qwen3-coder-30b-a3b",
+   "weightsGb": 32.4839,
+   "weightsSource": "ollama-manifest",
+   "streamedGb": 3.2361,
+   "paramsB": 30.532,
+   "activeB": 3.353,
+   "moe": true,
+   "kv": {
+    "fullBytesPerToken": 98304,
+    "swaBytesPerToken": 0,
+    "window": null
+   },
+   "attnFlopsPerCtx": 786432,
+   "maxContext": 262144
+  },
   "gemma3-4b-q4": {
    "arch": "gemma-3-4b",
    "weightsGb": 2.499,
@@ -778,6 +842,38 @@
     "window": null
    },
    "attnFlopsPerCtx": 983040,
+   "maxContext": 131072
+  },
+  "deepseek-r1-distill-qwen-32b-q4": {
+   "arch": "deepseek-r1-distill-qwen-32b",
+   "weightsGb": 19.8513,
+   "weightsSource": "ollama-manifest",
+   "streamedGb": 19.3796,
+   "paramsB": 32.763,
+   "activeB": 32.763,
+   "moe": false,
+   "kv": {
+    "fullBytesPerToken": 262144,
+    "swaBytesPerToken": 0,
+    "window": null
+   },
+   "attnFlopsPerCtx": 1310720,
+   "maxContext": 131072
+  },
+  "deepseek-r1-distill-qwen-32b-q8": {
+   "arch": "deepseek-r1-distill-qwen-32b",
+   "weightsGb": 34.8209,
+   "weightsSource": "ollama-manifest",
+   "streamedGb": 33.9934,
+   "paramsB": 32.763,
+   "activeB": 32.763,
+   "moe": false,
+   "kv": {
+    "fullBytesPerToken": 262144,
+    "swaBytesPerToken": 0,
+    "window": null
+   },
+   "attnFlopsPerCtx": 1310720,
    "maxContext": 131072
   },
   "deepseek-r1-distill-llama-70b-q4": {
@@ -1772,6 +1868,38 @@
    "attnFlopsPerCtx": 385024,
    "maxContext": 202752
   },
+  "glm-4-9b-chat-q4": {
+   "arch": "glm-4-9b-chat",
+   "weightsGb": 6.2509,
+   "weightsSource": "ollama-manifest",
+   "streamedGb": 5.8381,
+   "paramsB": 9.399,
+   "activeB": 9.399,
+   "moe": false,
+   "kv": {
+    "fullBytesPerToken": 40960,
+    "swaBytesPerToken": 0,
+    "window": null
+   },
+   "attnFlopsPerCtx": 655360,
+   "maxContext": 131072
+  },
+  "glm-4-9b-chat-q8": {
+   "arch": "glm-4-9b-chat",
+   "weightsGb": 9.995,
+   "weightsSource": "ollama-manifest",
+   "streamedGb": 9.3349,
+   "paramsB": 9.399,
+   "activeB": 9.399,
+   "moe": false,
+   "kv": {
+    "fullBytesPerToken": 40960,
+    "swaBytesPerToken": 0,
+    "window": null
+   },
+   "attnFlopsPerCtx": 655360,
+   "maxContext": 131072
+  },
   "nemotron-3-super-120b-q4": {
    "arch": "nemotron-3-super-120b-a12b",
    "weightsGb": 86.8278,
@@ -2028,6 +2156,38 @@
    "attnFlopsPerCtx": 393216,
    "maxContext": 262144
   },
+  "nanbeige4.3-33b-q4": {
+   "arch": "nanbeige4.3-33b",
+   "weightsGb": 20.7888,
+   "weightsSource": "gguf",
+   "streamedGb": 20.0378,
+   "paramsB": 33.118,
+   "activeB": 33.118,
+   "moe": false,
+   "kv": {
+    "fullBytesPerToken": 212992,
+    "swaBytesPerToken": 0,
+    "window": null
+   },
+   "attnFlopsPerCtx": 1490944,
+   "maxContext": 524288
+  },
+  "nanbeige4.3-33b-q8": {
+   "arch": "nanbeige4.3-33b",
+   "weightsGb": 35.1951,
+   "weightsSource": "gguf",
+   "streamedGb": 33.9237,
+   "paramsB": 33.118,
+   "activeB": 33.118,
+   "moe": false,
+   "kv": {
+    "fullBytesPerToken": 212992,
+    "swaBytesPerToken": 0,
+    "window": null
+   },
+   "attnFlopsPerCtx": 1490944,
+   "maxContext": 524288
+  },
   "nemotron-3.5-bolt-e4b-q4": {
    "arch": "nemotron-3.5-bolt-e4b",
    "weightsGb": 6.1804,
@@ -2075,6 +2235,166 @@
    },
    "attnFlopsPerCtx": 1081344,
    "maxContext": 131072
+  },
+  "jebadiah-9b-q4": {
+   "arch": "jebadiah-9b",
+   "weightsGb": 5.7801,
+   "weightsSource": "gguf",
+   "streamedGb": 5.0639,
+   "paramsB": 8.208,
+   "activeB": 8.208,
+   "moe": false,
+   "kv": {
+    "fullBytesPerToken": 32768,
+    "swaBytesPerToken": 0,
+    "window": null
+   },
+   "attnFlopsPerCtx": 131072,
+   "maxContext": 262144
+  },
+  "jebadiah-9b-q5": {
+   "arch": "jebadiah-9b",
+   "weightsGb": 6.6425,
+   "weightsSource": "gguf",
+   "streamedGb": 5.8194,
+   "paramsB": 8.208,
+   "activeB": 8.208,
+   "moe": false,
+   "kv": {
+    "fullBytesPerToken": 32768,
+    "swaBytesPerToken": 0,
+    "window": null
+   },
+   "attnFlopsPerCtx": 131072,
+   "maxContext": 262144
+  },
+  "jebadiah-9b-q8": {
+   "arch": "jebadiah-9b",
+   "weightsGb": 9.7861,
+   "weightsSource": "gguf",
+   "streamedGb": 8.5734,
+   "paramsB": 8.208,
+   "activeB": 8.208,
+   "moe": false,
+   "kv": {
+    "fullBytesPerToken": 32768,
+    "swaBytesPerToken": 0,
+    "window": null
+   },
+   "attnFlopsPerCtx": 131072,
+   "maxContext": 262144
+  },
+  "jebadiah-27b-q4": {
+   "arch": "jebadiah-27b",
+   "weightsGb": 16.8107,
+   "weightsSource": "gguf",
+   "streamedGb": 15.9331,
+   "paramsB": 24.353,
+   "activeB": 24.353,
+   "moe": false,
+   "kv": {
+    "fullBytesPerToken": 65536,
+    "swaBytesPerToken": 0,
+    "window": null
+   },
+   "attnFlopsPerCtx": 393216,
+   "maxContext": 262144
+  },
+  "jebadiah-27b-q5": {
+   "arch": "jebadiah-27b",
+   "weightsGb": 19.5357,
+   "weightsSource": "gguf",
+   "streamedGb": 18.5158,
+   "paramsB": 24.353,
+   "activeB": 24.353,
+   "moe": false,
+   "kv": {
+    "fullBytesPerToken": 65536,
+    "swaBytesPerToken": 0,
+    "window": null
+   },
+   "attnFlopsPerCtx": 393216,
+   "maxContext": 262144
+  },
+  "jebadiah-27b-q8": {
+   "arch": "jebadiah-27b",
+   "weightsGb": 29.0471,
+   "weightsSource": "gguf",
+   "streamedGb": 27.5306,
+   "paramsB": 24.353,
+   "activeB": 24.353,
+   "moe": false,
+   "kv": {
+    "fullBytesPerToken": 65536,
+    "swaBytesPerToken": 0,
+    "window": null
+   },
+   "attnFlopsPerCtx": 393216,
+   "maxContext": 262144
+  },
+  "lfm3-1.7b-q4": {
+   "arch": "lfm3-1.7b",
+   "weightsGb": 1.0996,
+   "weightsSource": "ollama-manifest",
+   "streamedGb": 1.0996,
+   "paramsB": 1.646,
+   "activeB": 1.646,
+   "moe": false,
+   "kv": {
+    "fullBytesPerToken": 12288,
+    "swaBytesPerToken": 10240,
+    "window": 256
+   },
+   "attnFlopsPerCtx": 49152,
+   "maxContext": 262144
+  },
+  "ling-3.1-flash-1019": {
+   "arch": "ling-3.1-flash-1019",
+   "weightsGb": 357.9695,
+   "weightsSource": "gguf",
+   "streamedGb": 13.1485,
+   "paramsB": 560.275,
+   "activeB": 21.223,
+   "moe": true,
+   "kv": {
+    "fullBytesPerToken": 10368,
+    "swaBytesPerToken": 0,
+    "window": null
+   },
+   "attnFlopsPerCtx": 294912,
+   "maxContext": 262144
+  },
+  "ornith-1.5-122b-q4": {
+   "arch": "ornith-1.5-122b",
+   "weightsGb": 75.8439,
+   "weightsSource": "ollama-manifest",
+   "streamedGb": 4.4153,
+   "paramsB": 120.094,
+   "activeB": 7.754,
+   "moe": true,
+   "kv": {
+    "fullBytesPerToken": 24576,
+    "swaBytesPerToken": 0,
+    "window": null
+   },
+   "attnFlopsPerCtx": 393216,
+   "maxContext": 262144
+  },
+  "sage-a1.5-q4": {
+   "arch": "sage-a1.5",
+   "weightsGb": 21.7135,
+   "weightsSource": "gguf",
+   "streamedGb": 1.463,
+   "paramsB": 34.005,
+   "activeB": 2.8,
+   "moe": true,
+   "kv": {
+    "fullBytesPerToken": 20480,
+    "swaBytesPerToken": 0,
+    "window": null
+   },
+   "attnFlopsPerCtx": 163840,
+   "maxContext": 262144
   }
  }
 }

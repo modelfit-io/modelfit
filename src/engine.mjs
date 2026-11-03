@@ -19,10 +19,11 @@ import { baseModelId } from './model-groups.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
-/** The bundled snapshot of data/models.json (synced via scripts/sync-data.mjs). */
+/** The bundled snapshot of data/models.json (synced via scripts/sync-data.mjs), minus listed-only
+ * rows: listed on the site's model page, never ranked or scored (lib/ranked-models.ts). */
 export const DATASET = JSON.parse(
   readFileSync(join(__dirname, 'data', 'models.json'), 'utf8')
-);
+).filter((m) => m.listedOnly !== true);
 
 // Usable share of unified memory for model weights. macOS caps GPU-wired memory
 // well below total RAM on small machines, but the cap scales up with RAM, and
